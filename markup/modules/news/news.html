@@ -16,7 +16,7 @@
                         <article>
                             <h3>{{article.title}}</h3>
                             <div class="img_wrap">
-                                <img src="/%=staticPrefix=%img/content/news/{{article.img}}" alt="{{article.title}}"/>
+                                <img src="%=staticPrefix=%img/content/news/{{article.img}}" alt="{{article.title}}"/>
                             </div>
                             <p class="preview-text">{{article.text}}</p>
                             <p class="link-wrap"><a class="link" href="{{article.url}}" >{{article.text_link}} <i class="fa fa-arrow-right"></i></a></p>
@@ -44,7 +44,7 @@
                             {{#each blog.blog_item}}
                             <div class="item">
                                 <a class="item_a" href="#">
-                                    <img src="/%=staticPrefix=%img/content/news/{{img}}" alt=""/>
+                                    <img src="%=staticPrefix=%img/content/news/{{img}}" alt=""/>
                                     <span class="text">{{text}}</span>
                                     <span class="date">{{date}}</span>
                                 </a>
