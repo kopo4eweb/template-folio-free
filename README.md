@@ -1,4 +1,4 @@
-# ![template folio-free](https://raw.githubusercontent.com/kopo4eweb/template-folio-free/screen.png)
+# ![template folio-free](https://raw.githubusercontent.com/kopo4eweb/template-folio-free/master/screen.jpg)
 
 ## Использовалось:
 
