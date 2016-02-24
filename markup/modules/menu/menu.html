@@ -1,0 +1,9 @@
+<nav class="menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-3"><h2>{{title}}</h2></div>
+            <div class="col-md-5 col-sm-5 menu_wrap"><ul class="menu_list">{{#each item}}<li class="item"><a class="item_a goLink" href="{{url}}">{{title}}</a></li>{{/each}}</ul></div>
+            <div class="col-md-3 col-sm-4 social_wrap">{{#if social.action}}<ul class="social_list">{{#each social.item}}{{#if action}}<li class="item"><a class="item_a {{icon}}" target="{{target}}" href="{{url}}"> </a></li>{{/if}}{{/each}}</ul>{{/if}}</div>
+        </div>
+    </div>
+</nav>

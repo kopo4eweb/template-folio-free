@@ -1,0 +1,33 @@
+<!doctype html>
+<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body>
+
+            {{> header/header header.defaults}}
+
+            {{> menu/menu menu.defaults}}
+
+            {{> portfolio/portfolio portfolio.defaults}}
+
+            {{> testimonial/testimonial testimonial.defaults}}
+
+            {{> news/news news.defaults}}
+
+            {{> sponsor/sponsor sponsor.defaults}}
+
+            {{> bio/bio bio.defaults}}
+
+            {{> contact/contact contact.defaults}}
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=staticPrefix=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

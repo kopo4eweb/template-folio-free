@@ -1,0 +1,70 @@
+.header {
+    min-height: 500px;
+    background: url('%=staticPrefixForCss=%assets/header/photo-head.jpg') no-repeat top center;
+    background-attachment: fixed;
+    color: $header_color;
+
+    h1 {
+        margin: 0;
+        padding: 127px 0 0 65px;
+        span {
+            font-size: 86px;
+            font-family: $BebasNeueRegular;
+            margin: 0;
+            padding: 0;
+            line-height: 66px;
+            letter-spacing: 2px;
+            display: block;
+        }
+    }
+    h2 {
+        font-size: 31px;
+        font-family: $BebasNeueRegular;
+        margin: 0;
+        line-height: 30px;
+        padding: 0 0 40px 65px;
+        letter-spacing: 2px;
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .header {
+        min-height: 400px;
+        h1 {
+            padding-top: 100px;
+            span {
+                font-size: 66px;
+                line-height: 51px;
+            }
+        }
+        h2 {
+            font-size: 24px;
+            line-height: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .header {
+        min-height: 370px;
+        h1 {
+            padding-left: 35px;
+            span {
+                font-size: 46px;
+                line-height: 36px;
+            }
+        }
+        h2 {
+            font-size: 22px;
+            line-height: 23px;
+            padding-left: 35px;
+        }
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1600px) {
+    .header {
+        background-size: contain;
+    }
+}

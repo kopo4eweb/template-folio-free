@@ -1,0 +1,123 @@
+.menu {
+    background-color: $menu_bg_color;
+    color: $menu_color;
+    padding-top: 33px;
+    padding-bottom: 24px;
+
+    h2 {
+        line-height: 34px;
+        font-size: 44px;
+        font-family: $BebasNeueRegular;
+        letter-spacing: 1px;
+        margin: 0;
+        padding-left: 37px;
+    }
+
+    .menu_wrap {
+        text-align: right;
+
+        .menu_list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .item {
+                display: inline-block;
+                text-align: center;
+                padding: 11px 0 12px 0;
+                margin-right: 14px;
+
+                .item_a {
+                    font-family: $BebasNeueRegular;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    padding: 0 8px 11px 8px;
+                    color: $menu_link_color;
+                    border-bottom: 1px solid transparent;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        border-bottom: 1px solid $menu_link_hover_color;
+                        color: $menu_link_hover_color;
+                        transition: all .3s ease;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .social_wrap {
+        text-align: right;
+
+        .social_list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .item {
+                display: inline-block;
+                text-align: center;
+                padding: 3px 0 0 0;
+                margin-left: 10px;
+
+                .item_a {
+                    display: block;
+                    width: 36px;
+                    height: 36px;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 2px;
+                    height: 1px;
+                    background-color: $menu_social_hover_color;
+                    opacity: 0;
+                    margin: 5px auto 0 auto;
+                    transition: all .3s ease;
+                 }
+
+                &:hover {
+                    &:after {
+                        width: 35px;
+                        opacity: 1;
+                        transition: all .45s ease;
+                    }
+                }
+
+                @include social-icon('in', $in-icon);
+                @include social-icon('fb', $fb-icon);
+                @include social-icon('flickr', $flickr-icon);
+                @include social-icon('tw', $tw-icon);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 991px) {
+    .menu {
+        h2 {
+            padding-left: 0;
+        }
+    }
+}
+@media only screen and (max-width : 767px) {
+    .menu {
+        .menu_wrap {
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .menu {
+        h2 {
+            font-size: 34px;
+        }
+    }
+}

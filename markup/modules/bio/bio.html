@@ -1,0 +1,44 @@
+<section class="bio" id="bio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{title}}</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="name">{{name}}</div>
+                <div class="avatar">
+                    <img src="/%=staticPrefix=%img/content/bio/{{img}}" alt="{{name}}"/>
+                </div>
+                <div class="social">
+                    <ul class="list">{{#each social.item}}{{#if action}}<li class="item"><a class="item_a {{icon}}" target="{{target}}" href="{{url}}"> </a></li>{{/if}}{{/each}}</ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="text">
+                    <h3>{{text_title}}</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel
+                        diam non neque iaculis sollicitudin. Nunc nec massa et risus
+                        iaculis interdum et sed mi. Nam viverra ac neque eu aliquet.
+                        Maecenas posuere, neque non vestibulum sodales, arcu diam
+                        interdum nulla, in molestie magna magna vitae justo. Aenean
+                        semper volutpat sapien eu porta. Etiam vestibulum pharetra
+                        risus vel ultricies. Phasellus tempus, enim sed gravida interdum,
+                        lorem ipsum auctor libero, ut ultrices dolor dolor at nulla.
+                        Integer viverra vitae velit eget tincidunt. Fusce tristique eros ac
+                        est mattis consequat.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel
+                        diam non neque iaculis sollicitudin. Nunc nec massa et risus
+                        iaculis interdum et sed mi. Nam viverra ac neque eu aliquet.
+                        Maecenas posuere, neque non vestibulum sodales, arcu diam
+                        interdum nulla, in molestie magna magna vitae justo.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

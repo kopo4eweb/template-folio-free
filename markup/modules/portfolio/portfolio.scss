@@ -1,0 +1,343 @@
+.portfolio {
+    padding-top: 57px;
+    padding-bottom: 100px;
+    background-color: $portfolio_bg_color;
+    color: $portfolio_color;
+
+    h2 {
+        font-family: $BebasNeueRegular;
+        line-height: 34px;
+        font-size: 44px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+    }
+
+    .list_filter {
+        margin-top: 12px;
+        text-align: center;
+        padding-bottom: 50px;
+
+        .item {
+            color: $portfolio_filter_color;
+            font-family: $BebasNeueRegular;
+            font-size: 24px;
+            display: inline-block;
+            padding: 0 3px;
+            cursor: pointer;
+
+            &:hover {
+                color: $portfolio_filter_hover_color;
+            }
+        }
+
+        .action {
+            color: $portfolio_filter_hover_color;
+            cursor: default;
+        }
+    }
+
+    .list_img {
+        position: relative;
+        overflow: hidden;
+
+        .item {
+            float: left;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                border: none;
+                display: block;
+                width: 100%;
+            }
+
+            .action {
+                background-color: $portfolio_img_bg_hover_color;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: all .5s;
+
+                .zoom {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    transition: all .3s ease;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        max-height: 100%;
+                        max-width: 100%;
+                        width: auto;
+                        height: auto;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        z-index: 10;
+                        @include bg($zoom-icon);
+                    }
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        max-height: 100%;
+                        max-width: 100%;
+                        width: 10px;
+                        height: 10px;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        z-index: 2;
+                        background-color: $portfolio_img_zoom_bg_color;
+                        border-radius: 50%;
+                        border: 1px solid transparent;
+                        opacity: 0;
+                        transition: all .3s ease;
+                    }
+
+                    &:hover {
+                        &:before {
+                            opacity: 1;
+                            transition: all .45s ease;
+                            transform: scale(6);
+                        }
+                    }
+                }
+
+                .item_wrap {
+                    position: absolute;
+                    left: 0;
+                    bottom: 20px;
+                    text-align: center;
+                    width: 100%;
+
+                    .social {
+                        display: inline-block;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+
+                        .social_item {
+                            display: inline-block;
+                            padding: 0;
+                            text-align: center;
+
+                            &:last-of-type {
+                                margin-right: 0;
+                            }
+
+                            .item_a {
+                                display: inline-block;
+                            }
+
+                            // mixins.scss
+                            @include social-icon-portfolio('polaroid', $polaroid-icon, $polaroid-icon-hover);
+                            @include social-icon-portfolio('link', $link-icon, $link-icon-hover);
+                            @include social-icon-portfolio('info', $info-icon, $info-icon-hover);
+                            @include social-icon-portfolio('like', $like-icon, $like-icon-hover);
+
+                        }
+                    }
+
+                }
+
+            }
+
+            &:hover {
+                .action {
+                    opacity: 1;
+                    padding-top: 0;
+                }
+            }
+
+        }
+
+        .type-235x235 {
+            width: 235px;
+            height: 235px;
+
+            .action {
+                .item_wrap {
+                    .social {
+                        width: 215px;
+
+                        .social_item {
+                            margin-right: 26px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .type-235x350 {
+            width: 235px;
+            height: 350px;
+
+            .action {
+                .item_wrap {
+                    .social {
+                        width: 215px;
+
+                        .social_item {
+                            margin-right: 26px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .type-470x235 {
+            width: 470px;
+            height: 235px;
+
+            .action {
+                .item_wrap {
+                    .social {
+                        width: 235px;
+
+                        .social_item {
+                            margin-right: 37px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .item_hide {
+            display: none;
+        }
+
+    }
+}
+
+@media only screen and (max-width : 991px) {
+    .portfolio {
+        .list_img {
+            .type-235x235, .type-235x350 {
+                .action {
+                    .item_wrap {
+                        .social {
+                            width: 100%;
+
+                            .social_item {
+                                margin-right: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .type-235x235 {
+                width: 25%;
+                height: auto;
+            }
+
+            .type-235x350 {
+                width: 25%;
+                height: auto;
+            }
+
+            .type-470x235 {
+                width: 50%;
+                height: auto;
+            }
+
+        }
+    }
+}
+@media only screen and (max-width : 767px) {
+    .portfolio {
+        .list_img {
+
+            .item {
+                .action {
+                    .zoom {
+                        bottom: 30%;
+                    }
+                    .item_wrap {
+                        bottom: 10px;
+                    }
+                }
+            }
+
+            .type-235x235, .type-235x350 {
+                .action {
+                    .item_wrap {
+                        .social {
+                            .social_item {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .type-470x235 {
+                .action {
+                    .item_wrap {
+                        .social {
+                            width: 100%;
+
+                            .social_item {
+                                margin-right: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .portfolio {
+        .list_img {
+
+            .type-235x235 {
+                width: 50%;
+            }
+
+            .type-235x350 {
+                width: 50%;
+            }
+
+            .type-470x235 {
+                width: 100%;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .portfolio {
+        h2 {
+            font-size: 34px;
+        }
+        .list_filter {
+            .item {
+                font-size: 20px;
+            }
+        }
+    }
+}

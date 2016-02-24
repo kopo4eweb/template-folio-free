@@ -1,0 +1,61 @@
+<section class="news" id="news">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{title}}</h2>
+            </div>
+            <div class="col-md-6 news_last">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="date">{{article.date}}</div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tag"><i class="fa fa-tags"></i>{{{article.tag}}}</div>
+                    </div>
+                    <div class="col-md-12">
+                        <article>
+                            <h3>{{article.title}}</h3>
+                            <div class="img_wrap">
+                                <img src="/%=staticPrefix=%img/content/news/{{article.img}}" alt="{{article.title}}"/>
+                            </div>
+                            <p class="preview-text">{{article.text}}</p>
+                            <p class="link-wrap"><a class="link" href="{{article.url}}" >{{article.text_link}} <i class="fa fa-arrow-right"></i></a></p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="news_blog">
+                    <div class="tags">
+                        <h3>{{tags.title}}</h3>
+
+                        <div class="list">
+                            {{#each tags.tags_item}}
+                                <a href="{{url}}" class="item">{{title}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+
+
+                    <div class="blogs">
+                        <h3>{{{blog.title}}}</h3>
+
+                        <div class="list">
+                            {{#each blog.blog_item}}
+                            <div class="item">
+                                <a class="item_a" href="#">
+                                    <img src="/%=staticPrefix=%img/content/news/{{img}}" alt=""/>
+                                    <span class="text">{{text}}</span>
+                                    <span class="date">{{date}}</span>
+                                </a>
+                                <div class="clearfix"></div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

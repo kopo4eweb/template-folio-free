@@ -1,0 +1,126 @@
+.bio {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $bio_bg_color;
+    color: $bio_color;
+
+    h2 {
+        font-family: $BebasNeueRegular;
+        line-height: 34px;
+        font-size: 44px;
+        text-align: center;
+        margin: 0 0 50px 0;
+        padding: 0;
+        text-transform: uppercase;
+        color: $bio_title_color;
+    }
+
+    .name {
+        font-family: $BebasNeueRegular;
+        font-size: 34px;
+        text-align: center;
+    }
+    .avatar {
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        background-color: $bio_avatar_bg_color;
+        text-align: center;
+        margin: 30px auto 0 auto;
+        position: relative;
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+
+    .social {
+        margin-top: 40px;
+        text-align: center;
+
+        .list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .item {
+                display: inline-block;
+                text-align: center;
+                padding: 3px 0 0 0;
+                margin-left: 10px;
+
+                .item_a {
+                    display: block;
+                    width: 36px;
+                    height: 36px;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 2px;
+                    height: 1px;
+                    background-color: $bio_social_hover_color;
+                    opacity: 0;
+                    margin: 5px auto 0 auto;
+                    transition: all .3s ease;
+                }
+
+                &:hover {
+                    &:after {
+                        width: 35px;
+                        opacity: 1;
+                        transition: all .45s ease;
+                    }
+                }
+
+                @include social-icon('in', $in-icon);
+                @include social-icon('fb', $fb-icon);
+                @include social-icon('flickr', $flickr-icon);
+                @include social-icon('tw', $tw-icon);
+            }
+        }
+    }
+
+    .text {
+        padding-top: 10px;
+
+        h3 {
+            font-family: $BebasNeueRegular;
+            font-size: 18px;
+            padding: 0;
+            margin: 0 0 15px 0;
+            letter-spacing: 1px;
+        }
+        p {
+            font-family: $OpenSansRegular;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    }
+}
+
+@media only screen and (max-width : 991px) {
+    .bio {
+        .text {
+            padding-top: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .bio {
+        h2 {
+            font-size: 34px;
+        }
+    }
+}

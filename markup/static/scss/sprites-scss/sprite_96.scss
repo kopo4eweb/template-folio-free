@@ -1,0 +1,54 @@
+  $fb-icon: 40px 40px -40px -40px 35px 35px 145px 140px 'sprite.png';
+  $flickr-icon: 0px 40px 0px -40px 36px 36px 145px 140px 'sprite.png';
+  $in-icon: 0px 0px 0px 0px 36px 36px 145px 140px 'sprite.png';
+  $info-icon-hover: 65px 80px -65px -80px 27px 27px 145px 140px 'sprite.png';
+  $info-icon: 34px 80px -34px -80px 27px 27px 145px 140px 'sprite.png';
+  $like-icon-hover: 117px 0px -117px 0px 28px 24px 145px 140px 'sprite.png';
+  $like-icon: 117px 28px -117px -28px 28px 24px 145px 140px 'sprite.png';
+  $link-icon-hover: 117px 56px -117px -56px 20px 26px 145px 140px 'sprite.png';
+  $link-icon: 0px 114px 0px -114px 20px 26px 145px 140px 'sprite.png';
+  $polaroid-icon-hover: 80px 35px -80px -35px 33px 31px 145px 140px 'sprite.png';
+  $polaroid-icon: 80px 0px -80px 0px 33px 31px 145px 140px 'sprite.png';
+  $tw-icon: 40px 0px -40px 0px 36px 36px 145px 140px 'sprite.png';
+  $zoom-icon: 0px 80px 0px -80px 30px 30px 145px 140px 'sprite.png';
+
+  @mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+  }
+
+  @mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(%=staticPrefixForCss=%png-sprite/96dpi/#{$sprite-image});
+  }
+
+  @mixin sprite-mixin-template($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    width: nth($sprite, 5);
+    height: nth($sprite, 6);
+  }
+
+  @mixin bg($sprite, $repeat: no-repeat) {
+    @include sprite-mixin-template($sprite);
+    $sprite-total-width: nth($sprite, 7);
+    $sprite-total-height: nth($sprite, 8);
+    background-size: $sprite-total-width, $sprite-total-height;
+    background-repeat: $repeat;
+
+      @media screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+          $sprite-image: nth($sprite, 9);
+          background-image: url(%=staticPrefixForCss=%png-sprite/192dpi/#{$sprite-image});
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 3), only screen and ( min-resolution: 288dpi), only screen and ( min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+          $sprite-image: nth($sprite, 9);
+          background-image: url(%=staticPrefixForCss=%png-sprite/288dpi/#{$sprite-image});
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 4), only screen and ( min-resolution: 384dpi), only screen and ( min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+          $sprite-image: nth($sprite, 9);
+          background-image: url(%=staticPrefixForCss=%png-sprite/384dpi/#{$sprite-image});
+      }
+  }

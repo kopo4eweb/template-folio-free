@@ -1,0 +1,43 @@
+<section class="portfolio" id="work">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{title}}</h2>
+            </div>
+            <div class="col-md-12"><div class="list_filter">{{#each filter_item}}<span class="item filter_sort" data-sort="{{sort}}" data-filter="{{filter}}">{{title}}</span>{{/each}}</div></div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 list_img" id="portfolio__img">
+
+                {{#each portfolio_item}}
+                {{#if action}}
+                <div class="mix item {{filter}} {{wxh_class}}" data-myorder="{{myorder}}">
+                    <img src="%=staticPrefix=%img/content/portfolio/thumb/{{thumb}}" alt="{{title}}">
+                    <div class="action">
+                        <a href="%=staticPrefix=%img/content/portfolio/full/{{img}}" class="zoom zoom_icon image-popup-vertical-fit"></a>
+
+                        <div class="item_wrap">
+                            <ul class="social">
+                                {{#each social_item}}
+                                {{#if action}}
+                                <li class="social_item">
+                                    <a href="{{url}}" class="item_a {{icon}}"></a>
+                                </li>
+                                {{/if}}
+                                {{/each}}
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+                {{/if}}
+                {{/each}}
+
+            </div>
+        </div>
+
+    </div>
+</section>

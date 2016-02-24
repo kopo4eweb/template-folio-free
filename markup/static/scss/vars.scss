@@ -1,0 +1,55 @@
+// File for scss-vars.
+// For example: main colors, paddings and so on.
+$base_color_1: #ffffff;
+$base_color_2: #00BB99;
+$base_color_3: #e74c3c;
+$base_color_4: #252222;
+
+$header_color: $base_color_1;
+
+$menu_bg_color: $base_color_4;
+$menu_color: $base_color_1;
+$menu_link_color: $base_color_1;
+$menu_link_hover_color: $base_color_2;
+$menu_social_hover_color: $base_color_1;
+
+$portfolio_bg_color: $base_color_2;
+$portfolio_color: $base_color_1;
+$portfolio_filter_color: $base_color_1;
+$portfolio_filter_hover_color: #335e4d;
+$portfolio_img_bg_hover_color: rgba(0, 187, 153, 0.6);
+$portfolio_img_zoom_bg_color: $base_color_2;
+
+$testimonial_color: $base_color_1;
+
+$news_bg_color: #cdcdcd;
+$news_color: $base_color_4;
+$news_last_date_bg_color: $base_color_2;
+$news_last_date_color: $base_color_1;
+$news_last_tag_color: $base_color_3;
+$news_last_tag_icon_color: #62b9b0;
+$news_last_article_title_color: $base_color_2;
+$news_last_article_text_color: #666767;
+$news_last_article_link_color: $base_color_3;
+$news_blog_tag_title_color: $base_color_2;
+$news_blog_tag_link_color: $base_color_1;
+$news_blog_tag_link_bg_color: #00bb99;
+$news_blog_tag_link_bg_hover_color: $base_color_3;
+$news_blogs_title_color: $base_color_4;
+$news_blogs_title_other_color: #818181;
+$news_blogs_item_bg_hover_color: #c1c1c1;
+$news_blogs_item_text_color: #464040;
+$news_blogs_item_date_color: #EE918D;
+
+$sponsor_bg_color: #BFBFBF;
+
+$bio_bg_color: #FF5249;
+$bio_color: $base_color_1;
+$bio_title_color: $base_color_4;
+$bio_avatar_bg_color: $base_color_1;
+$bio_social_hover_color: $base_color_1;
+
+$contact_bg_color: #c0c0c0;
+$contact_color: $base_color_1;
+$contact_title_color: $base_color_4;
+$contact_email_wrap_color: $base_color_1;

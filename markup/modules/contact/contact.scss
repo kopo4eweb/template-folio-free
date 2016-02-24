@@ -1,0 +1,93 @@
+.contact {
+    padding-top: 50px;
+    padding-bottom: 35px;
+    background-color: $contact_bg_color;
+    color: $contact_color;
+    background: url('%=staticPrefixForCss=%assets/contact/contact-bg.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    text-align: center;
+
+    h2 {
+        font-family: $BebasNeueRegular;
+        line-height: 34px;
+        font-size: 44px;
+        text-align: center;
+        margin: 0 0 70px 0;
+        padding: 0;
+        text-transform: uppercase;
+        color: $contact_title_color;
+    }
+    .phone {
+        font-family: $BebasNeueRegular;
+        line-height: 1;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .email_wrap {
+        width: 700px;
+        margin: 0 auto 20px auto;
+        border: 5px solid $contact_email_wrap_color;
+        padding: 15px 20px;
+        text-align: center;
+
+        .email {
+            font-family: $BebasNeueRegular;
+            line-height: 1;
+            font-size: 56px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            word-break: break-all;
+        }
+    }
+
+    .address {
+        font-family: $BebasNeueRegular;
+        line-height: 1;
+        font-size: 30px;
+        margin-bottom: 100px;
+        text-transform: uppercase;
+    }
+    .copyright {
+        font-family: $OpenSansSemibold;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+}
+
+@media only screen and (max-width : 767px) {
+    .contact {
+        .phone {
+            font-size: 38px;
+        }
+        .email_wrap {
+            width: 100%;
+            .email {
+                font-size: 46px;
+                letter-spacing: 4px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .contact {
+        h2 {
+            font-size: 34px;
+        }
+        .phone {
+            font-size: 30px;
+        }
+        .email_wrap {
+            .email {
+                font-size: 24px;
+                letter-spacing: 3px;
+            }
+        }
+        .address {
+            font-size: 26px;
+        }
+    }
+}
