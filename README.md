@@ -7,7 +7,7 @@
 + Изображения: из psd-макета, остальное взято здесь [ссылка](https://www.pexels.com/search/people/)
 + Шрифты: BebasNeue Regular, Open Sans Regular, Open Sans Semibold, Open Sans Light Italic, Open Sans Semibold Italic, FontAwesome
 + Верстка: Адаптивна под мобильные устройства
-+ favicon: под многие мобильные устройства, сгенерированны тут [ссылка](http://www.favicon-generator.org/)
++ favicon: под многие мобильные устройства, сгенерированы тут [ссылка](http://www.favicon-generator.org/)
 + Сетка: Кастомная сетка bootstrap [ссылка](http://getbootstrap.com/customize/?id=da9badbe2e35f86d1152)
 + CSS: SCSS, создан миксин для социальных иконок
 + JS: jQuery
