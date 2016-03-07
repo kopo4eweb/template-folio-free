@@ -75,6 +75,7 @@
                     right: 0;
                     bottom: 0;
                     margin: auto;
+                    -ms-transition: all .3s ease;
                     transition: all .3s ease;
 
                     &:after {
@@ -99,8 +100,8 @@
                         display: block;
                         max-height: 100%;
                         max-width: 100%;
-                        width: 0px;
-                        height: 0px;
+                        width: 0;
+                        height: 0;
                         position: absolute;
                         top: 0;
                         bottom: 0;
@@ -112,14 +113,18 @@
                         border-radius: 50%;
                         border: 1px solid transparent;
                         opacity: 0;
+                        -ms-transition: all .3s ease;
                         transition: all .3s ease;
                     }
 
                     &:hover {
                         &:before {
                             opacity: 1;
+                            width: 70px;
+                            height: 70px;
+                            -ms-transition: all .45s ease;
                             transition: all .45s ease;
-                            transform: scale(26);
+                            zoom: 1;
                         }
                     }
                 }
