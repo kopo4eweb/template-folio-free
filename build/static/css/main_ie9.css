@@ -5298,8 +5298,8 @@ img.mfp-img {
   display: block;
   max-height: 100%;
   max-width: 100%;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -5316,9 +5316,10 @@ img.mfp-img {
 
 .portfolio .list_img .item .action .zoom:hover:before {
   opacity: 1;
+  width: 70px;
+  height: 70px;
   transition: all .45s ease;
-  -ms-transform: scale(26);
-      transform: scale(26);
+  zoom: 1;
 }
 
 .portfolio .list_img .item .action .item_wrap {
