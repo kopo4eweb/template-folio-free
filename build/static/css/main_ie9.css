@@ -305,7 +305,6 @@ img {
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -1291,64 +1290,49 @@ hr {
 }
 
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
 
 .fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8);
-}
-
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
 }
 
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
-  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
-  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 
@@ -1357,8 +1341,7 @@ hr {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .fa-stack {
@@ -3972,13 +3955,11 @@ html, body {
 }
 
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-  cursor: -webkit-zoom-out;
   cursor: zoom-out;
 }
 
 .mfp-zoom {
   cursor: pointer;
-  cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
 
@@ -3990,10 +3971,7 @@ html, body {
 .mfp-arrow,
 .mfp-preloader,
 .mfp-counter {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
+  user-select: none;
 }
 
 .mfp-loading.mfp-figure {
@@ -4337,16 +4315,16 @@ img.mfp-img {
 
 @media all and (max-width: 900px) {
   .mfp-arrow {
-    -webkit-transform: scale(0.75);
-    transform: scale(0.75);
+    -ms-transform: scale(0.75);
+        transform: scale(0.75);
   }
   .mfp-arrow-left {
-    -webkit-transform-origin: 0;
-    transform-origin: 0;
+    -ms-transform-origin: 0;
+        transform-origin: 0;
   }
   .mfp-arrow-right {
-    -webkit-transform-origin: 100%;
-    transform-origin: 100%;
+    -ms-transform-origin: 100%;
+        transform-origin: 100%;
   }
   .mfp-container {
     padding-left: 6px;
@@ -4459,14 +4437,12 @@ img.mfp-img {
   background-color: #ffffff;
   opacity: 0;
   margin: 5px auto 0 auto;
-  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 .bio .social .list .item:hover:after {
   width: 35px;
   opacity: 1;
-  -webkit-transition: all .45s ease;
   transition: all .45s ease;
 }
 
@@ -4479,19 +4455,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .bio .social .list .item .icon__in {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .bio .social .list .item .icon__in {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .bio .social .list .item .icon__in {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -4506,19 +4482,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .bio .social .list .item .icon__fb {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .bio .social .list .item .icon__fb {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .bio .social .list .item .icon__fb {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -4533,19 +4509,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .bio .social .list .item .icon__flickr {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .bio .social .list .item .icon__flickr {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .bio .social .list .item .icon__flickr {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -4560,19 +4536,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .bio .social .list .item .icon__tw {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .bio .social .list .item .icon__tw {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .bio .social .list .item .icon__tw {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -4812,14 +4788,12 @@ img.mfp-img {
   padding: 0 8px 11px 8px;
   color: #ffffff;
   border-bottom: 1px solid transparent;
-  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 .menu .menu_wrap .menu_list .item .item_a:hover {
   border-bottom: 1px solid #00BB99;
   color: #00BB99;
-  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
@@ -4858,14 +4832,12 @@ img.mfp-img {
   background-color: #ffffff;
   opacity: 0;
   margin: 5px auto 0 auto;
-  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 .menu .social_wrap .social_list .item:hover:after {
   width: 35px;
   opacity: 1;
-  -webkit-transition: all .45s ease;
   transition: all .45s ease;
 }
 
@@ -4878,19 +4850,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .menu .social_wrap .social_list .item .icon__in {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .menu .social_wrap .social_list .item .icon__in {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .menu .social_wrap .social_list .item .icon__in {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -4905,19 +4877,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .menu .social_wrap .social_list .item .icon__fb {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .menu .social_wrap .social_list .item .icon__fb {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .menu .social_wrap .social_list .item .icon__fb {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -4932,19 +4904,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .menu .social_wrap .social_list .item .icon__flickr {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .menu .social_wrap .social_list .item .icon__flickr {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .menu .social_wrap .social_list .item .icon__flickr {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -4959,19 +4931,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .menu .social_wrap .social_list .item .icon__tw {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .menu .social_wrap .social_list .item .icon__tw {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .menu .social_wrap .social_list .item .icon__tw {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -5112,13 +5084,11 @@ img.mfp-img {
   margin-right: 3px;
   text-decoration: none;
   margin-bottom: 12px;
-  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 .news .news_blog .tags .list .item:hover {
   background-color: #e74c3c;
-  -webkit-transition: all .45s ease;
   transition: all .45s ease;
 }
 
@@ -5268,7 +5238,6 @@ img.mfp-img {
   height: 100%;
   width: 100%;
   opacity: 0;
-  -webkit-transition: all .5s;
   transition: all .5s;
 }
 
@@ -5281,7 +5250,6 @@ img.mfp-img {
   right: 0;
   bottom: 0;
   margin: auto;
-  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
@@ -5307,19 +5275,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .portfolio .list_img .item .action .zoom:after {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .portfolio .list_img .item .action .zoom:after {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .portfolio .list_img .item .action .zoom:after {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -5343,16 +5311,14 @@ img.mfp-img {
   border-radius: 50%;
   border: 1px solid transparent;
   opacity: 0;
-  -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 .portfolio .list_img .item .action .zoom:hover:before {
   opacity: 1;
-  -webkit-transition: all .45s ease;
   transition: all .45s ease;
-  -webkit-transform: scale(26);
-          transform: scale(26);
+  -ms-transform: scale(26);
+      transform: scale(26);
 }
 
 .portfolio .list_img .item .action .item_wrap {
@@ -5393,19 +5359,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__polaroid {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__polaroid {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__polaroid {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -5420,19 +5386,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__polaroid:hover {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__polaroid:hover {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__polaroid:hover {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -5447,19 +5413,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__link {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__link {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__link {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -5474,19 +5440,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__link:hover {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__link:hover {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__link:hover {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -5501,19 +5467,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__info {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__info {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__info {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -5528,19 +5494,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__info:hover {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__info:hover {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__info:hover {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -5555,19 +5521,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__like {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__like {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__like {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -5582,19 +5548,19 @@ img.mfp-img {
   background-repeat: no-repeat;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
+@media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx), only screen and (min-device-pixel-ratio: 2) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__like:hover {
     background-image: url(../img/png-sprite/192dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
+@media only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx), only screen and (min-device-pixel-ratio: 3) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__like:hover {
     background-image: url(../img/png-sprite/288dpi/sprite.png);
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
+@media only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx), only screen and (min-device-pixel-ratio: 4) {
   .portfolio .list_img .item .action .item_wrap .social .social_item .icon__like:hover {
     background-image: url(../img/png-sprite/384dpi/sprite.png);
   }
@@ -5765,8 +5731,8 @@ img.mfp-img {
   bottom: -50px;
   right: 15px;
   font-weight: normal;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+      transform: scaleX(-1);
 }
 
 .testimonial .wrap p {
