@@ -1,0 +1,64 @@
+.portfolio {
+    .list_img {
+        .item {
+            .action {
+                background-image: url('%=staticPrefixForCss=%assets/portfolio/ie8-bg.png');
+                opacity: 1;
+                display: none;
+                .zoom {
+                    &:before {
+                        width: 0;
+                        height: 0;
+                        display: none;
+                    }
+                }
+            }
+
+            &:hover {
+                .action {
+                    display: block;
+                    padding-top: 0;
+                }
+            }
+        }
+
+        .type-235x235 {
+            .action {
+                .item_wrap {
+                    .social {
+                        width: 100%;
+                        .social_item:last-of-type {
+                            margin-right: 0px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .type-235x350 {
+            .action {
+                .item_wrap {
+                    .social {
+                        width: 100%;
+                        .social_item:last-of-type {
+                            margin-right: 0px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .type-470x235 {
+            .action {
+                .item_wrap {
+                    .social {
+                        width: 100%;
+                        .social_item:last-of-type {
+                            margin-right: 0px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

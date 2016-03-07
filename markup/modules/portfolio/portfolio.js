@@ -21,6 +21,11 @@ $(function () {
         container.find('.item').addClass('item_hide');
     });
 
+    // fix function for the mixLoad
+    if ($('html').hasClass('ie9') || $('html').hasClass('ie8')) {
+        container.find('.item').addClass('item_hide');
+    }
+
     $('.filter_sort').on('click', function () {
         var filter_sort_but = $(this);
 

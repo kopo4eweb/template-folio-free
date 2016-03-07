@@ -1,0 +1,22 @@
+.menu {
+    .social_wrap {
+        .social_list {
+            .item {
+                &::after {
+                    content: " ";
+                    display: block;
+                    width: 0px;
+                    height: 1px;
+                    background-color: $menu_social_hover_color;
+                    margin: 5px auto 0 auto;
+                }
+
+                &:hover {
+                    &::after {
+                        width: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
